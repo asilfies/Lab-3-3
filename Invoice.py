@@ -19,7 +19,7 @@ class Invoice:
         def totalDiscount(self, products):
                 total_discount = 0
                 for k, v in products.items():
-                        total_discount += ( float(v['unit_price']) * int(v['qnt']) * int(v['qnt'] )/ 100)
+                        total_discount += ( float(v['unit_price']) * int(v['qnt']) * int(v['discount'] )/ 100)
                 total_discount = round(total_discount, 2)
                 self.total_discount = total_discount
                 return total_discount
